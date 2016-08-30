@@ -726,6 +726,10 @@
 
     <target name="test" depends="compiletests"
             description="Compile unit tests and run them using JUnit.">
+
+	        <echo>Java Version via Ant: ${ant.java.version}</echo>
+            <echo>Java Version System Prop: ${java.version}</echo>
+
            <!-- Execute JUnit tests -->
             <junit printsummary="true" showoutput="false" fork="true"
                     errorProperty="test.failed" failureProperty="test.failed">
